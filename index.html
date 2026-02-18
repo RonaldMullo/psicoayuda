@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nhoa · Ayuda Psicológica</title>
+
+  <meta name="description" content="Nhoa: apoyo psicológico clínico, cálido y seguro. Herramientas de autocuidado, orientación y agendamiento de sesiones.">
+  <meta name="author" content="Ronald Mullo">
+
+  <!-- Basic privacy/safety hardening (best as HTTP headers in production) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Ir al inicio">
+      <img src="img/logo1.png" alt="Nhoa logo">
+      <div class="brand-text">
+        <h1 data-i18n="headerTitle">Nhoa</h1>
+        <p class="tagline" data-i18n="tagline">Ayuda psicológica clínica, cálida y segura.</p>
+      </div>
+    </a>
+
+    <nav class="top-nav" aria-label="Navegación">
+      <a class="nav-link" href="#services" data-i18n="navServices">Servicios</a>
+      <a class="nav-link" href="#tools" data-i18n="navTools">Herramientas</a>
+      <a class="nav-link" href="#about" data-i18n="navAbout">Sobre Nhoa</a>
+      <a class="nav-link" href="#testimonials" data-i18n="navTestimonials">Testimonios</a>
+      <a class="nav-link" href="#contact" data-i18n="navContact">Contacto</a>
+
+      <button id="privacyModeBtn" class="btn ghost-btn" type="button" data-i18n="privacyModeBtn">Modo privado</button>
+      <button class="btn primary-btn" type="button" data-open-modal="booking" data-i18n="ctaBook">Agendar sesión</button>
+
+      <div class="lang-wrap">
+        <button id="langToggle" class="lang-icon" type="button"
+          aria-haspopup="menu" aria-expanded="false" aria-label="Cambiar idioma" title="Idioma">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm7.93 9h-3.09a15.6 15.6 0 0 0-1.16-5.02A8.03 8.03 0 0 1 19.93 11ZM12 4c.86 0 2.36 2.13 3.02 7H8.98C9.64 6.13 11.14 4 12 4ZM4.07 13h3.09c.2 1.84.65 3.6 1.16 5.02A8.03 8.03 0 0 1 4.07 13ZM7.16 11H4.07a8.03 8.03 0 0 1 4.25-5.02c-.51 1.42-.96 3.18-1.16 5.02Zm.82 2h8.04c-.66 4.87-2.16 7-3.02 7s-2.36-2.13-3.02-7Zm8.7 5.02c.51-1.42.96-3.18 1.16-5.02h3.09a8.03 8.03 0 0 1-4.25 5.02Z"/>
+          </svg>
+        </button>
+
+        <div id="langMenu" class="lang-menu" role="menu" hidden>
+          <button class="lang-item" role="menuitem" data-lang="es">Español</button>
+          <button class="lang-item" role="menuitem" data-lang="en">English</button>
+          <button class="lang-item" role="menuitem" data-lang="pt">Português</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h2 id="hero-title" class="hero-title" data-i18n="heroTitle">
+          Apoyo psicológico con calidez, confidencialidad y seguridad.
+        </h2>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Para niñas/os, jóvenes y adultos. Familias y parejas. Atención sensible para personas en contextos de alta vulnerabilidad.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn primary-btn" type="button" data-open-modal="booking" data-i18n="ctaBook">
+            Agendar sesión
+          </button>
+          <a class="btn soft-btn" href="#tools" data-i18n="ctaTools">Usar herramientas</a>
+        </div>
+
+        <p class="hero-privacy" data-i18n="heroPrivacyNote">
+          Nota de privacidad: puedes usar la app sin crear cuenta. En “Modo privado” reducimos almacenamiento y ocultamos datos en pantalla.
+        </p>
+      </div>
+
+      <div class="hero-card" aria-label="Tarjeta de confianza">
+        <h3 data-i18n="heroCardTitle">Seguridad primero</h3>
+        <ul class="checklist">
+          <li data-i18n="heroCardItem1">Minimización de datos</li>
+          <li data-i18n="heroCardItem2">Controles de pantalla privada</li>
+          <li data-i18n="heroCardItem3">Buenas prácticas de cifrado y acceso</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-dark" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="services-title" data-i18n="servicesTitle">Nuestros servicios</h2>
+        <p class="muted" data-i18n="servicesSubtitle">Atención psicológica con enfoque clínico y humano. Online y presencial (según disponibilidad).</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <h3 data-i18n="svc1Title">Atención psicológica individual</h3>
+          <p data-i18n="svc1Body">Niñas/os, adolescentes y adultos: evaluación, acompañamiento y plan de trabajo.</p>
+        </article>
+
+        <article class="service-card">
+          <h3 data-i18n="svc2Title">Familias y crianza</h3>
+          <p data-i18n="svc2Body">Orientación para madres, padres y cuidadores; habilidades emocionales y comunicación.</p>
+        </article>
+
+        <article class="service-card">
+          <h3 data-i18n="svc3Title">Parejas y matrimonios</h3>
+          <p data-i18n="svc3Body">Acompañamiento en acuerdos, vínculo, confianza, conflictos y proyectos de vida.</p>
+        </article>
+
+        <article class="service-card">
+          <h3 data-i18n="svc4Title">Alta vulnerabilidad</h3>
+          <p data-i18n="svc4Body">Uso con mínima información personal, límites claros de confidencialidad, y opciones de seguridad en pantalla.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS (your current mood tracker) -->
+  <section id="tools" class="section" aria-labelledby="tools-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="tools-title" data-i18n="toolsTitle">Herramientas de autocuidado</h2>
+        <p class="muted" data-i18n="toolsSubtitle">Registro breve de emociones y orientación diaria. No reemplaza atención de emergencia.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Mood tool -->
+        <section aria-labelledby="mood-title" class="panel tool-panel">
+          <h3 id="mood-title" data-i18n="moodTitle">¿Cómo te sientes hoy?</h3>
+
+          <div class="privacy-inline" role="status" aria-live="polite">
+            <span class="pill" id="privacy-pill" hidden data-i18n="privacyPill">Modo privado activo</span>
+            <button class="link-btn" type="button" data-open-modal="privacy" data-i18n="privacyHow">¿Cómo protegemos tu privacidad?</button>
+          </div>
+
+          <form id="mood-form">
+            <fieldset>
+              <legend data-i18n="moodLegend">Elige tu estado</legend>
+              <div class="mood-options">
+                <label>
+                  <input type="radio" name="mood" value="positive" required>
+                  <span data-i18n="moodPositive">Bien</span>
+                </label>
+                <label>
+                  <input type="radio" name="mood" value="neutral">
+                  <span data-i18n="moodNeutral">Estable</span>
+                </label>
+                <label>
+                  <input type="radio" name="mood" value="negative">
+                  <span data-i18n="moodNegative">Bajo ánimo</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <label for="mood-notes" data-i18n="notesLabel">Notas del día (opcional)</label>
+            <textarea id="mood-notes" name="notes" rows="4" data-i18n-placeholder="notesPlaceholder" placeholder="¿Qué influyó en tu estado emocional hoy?"></textarea>
+
+            <div class="btn-row">
+              <button class="btn primary-btn" type="submit" data-i18n="saveBtn">Guardar</button>
+              <button id="quickHideBtn" class="btn ghost-btn" type="button" data-i18n="quickHideBtn">Ocultar pantalla</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Support + stats -->
+        <section class="panel tool-panel">
+          <h3 id="support-title" data-i18n="supportTitle">Apoyo para hoy</h3>
+
+          <div class="support-grid">
+            <div class="support-card">
+              <h4 data-i18n="dailyAdvice">Consejo</h4>
+              <p id="advice-text" class="muted" data-i18n="advicePlaceholder">Aquí aparecerá un consejo según tu estado.</p>
+            </div>
+
+            <div class="support-card">
+              <h4 data-i18n="suggestedActivity">Actividad</h4>
+              <p id="activity-text" class="muted" data-i18n="activityPlaceholder">Aquí aparecerá una actividad que podría ayudarte.</p>
+            </div>
+          </div>
+
+          <hr class="sep">
+
+          <h3 id="stats-title" data-i18n="historyTitle">Tu historial</h3>
+          <div class="stats-wrap">
+            <div class="stats-panel" aria-live="polite">
+              <div class="stats-grid">
+                <div class="stat">
+                  <span class="stat-num" id="total-days">0</span>
+                  <span class="stat-label">Total</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num" id="positive-days">0</span>
+                  <span class="stat-label">Bien</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num" id="neutral-days">0</span>
+                  <span class="stat-label">Estable</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num" id="negative-days">0</span>
+                  <span class="stat-label">Bajo</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num" id="mood-score">0</span>
+                  <span class="stat-label">Score</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num" id="common-mood">—</span>
+                  <span class="stat-label">Común</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="mood-calendar" class="calendar" aria-label="Calendario emocional"></div>
+          </div>
+
+          <div class="btn-row">
+            <button id="clear-history" class="btn danger-btn" type="button" data-i18n="clearHistory">Borrar historial</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-warm" aria-labelledby="about-title">
+    <div class="container">
+      <div class="grid-2 about-grid">
+        <div>
+          <h2 id="about-title" data-i18n="aboutTitle">Sobre Nhoa</h2>
+          <p class="muted" data-i18n="aboutBody1">
+            Nhoa nace para ofrecer apoyo psicológico con una estética clínica y cálida, y con seguridad como prioridad.
+          </p>
+          <p class="muted" data-i18n="aboutBody2">
+            Para contextos de alta vulnerabilidad, priorizamos: mínima recolección de datos, controles de privacidad en pantalla y opciones sin cuenta.
+          </p>
+
+          <div class="notice">
+            <strong data-i18n="aboutNoticeTitle">Importante</strong>
+            <p class="muted" data-i18n="aboutNoticeBody">
+              Si estás en una situación de riesgo inmediato, busca ayuda local de emergencia. Esta app no sustituye servicios de emergencia.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-media" aria-label="Imagen ilustrativa">
+          <div class="media-frame">
+            <img src="img/logo1.png" alt="Nhoa" class="media-img">
+            <p class="muted small" data-i18n="aboutMediaHint">Puedes reemplazar esta imagen por una foto profesional o ilustración.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section section-cream" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section-head center">
+        <h2 id="testimonials-title" data-i18n="testimonialsTitle">Testimonios</h2>
+        <p class="muted" data-i18n="testimonialsSubtitle">Mensajes anónimos o con iniciales. No publicamos detalles sensibles.</p>
+      </div>
+
+      <div class="testimonial-row" role="region" aria-label="Carrusel de testimonios">
+        <article class="testimonial-card">
+          <h3>“A.”</h3>
+          <p class="muted" data-i18n="t1">Me sentí acompañada sin presión. El modo privado me dio tranquilidad.</p>
+        </article>
+        <article class="testimonial-card">
+          <h3>“J.”</h3>
+          <p class="muted" data-i18n="t2">La guía diaria es breve y útil. Me ayuda a ponerle nombre a lo que siento.</p>
+        </article>
+        <article class="testimonial-card">
+          <h3>“M.”</h3>
+          <p class="muted" data-i18n="t3">Me gustó que no pide datos innecesarios.</p>
+        </article>
+        <article class="testimonial-card">
+          <h3>“S.”</h3>
+          <p class="muted" data-i18n="t4">La experiencia es muy cálida y clara. Recomiendo para familias.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="section section-dark" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="cta">
+        <h2 id="contact-title" data-i18n="contactTitle">Tu próximo paso puede ser simple</h2>
+        <p class="muted" data-i18n="contactSubtitle">Agenda una sesión o deja un mensaje. Puedes usar un alias. Comparte solo lo necesario.</p>
+
+        <form class="cta-form" id="contact-form">
+          <label class="sr-only" for="contact-name" data-i18n="contactNameLabel">Nombre o alias</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" inputmode="text"
+            data-i18n-placeholder="contactNamePh" placeholder="Nombre o alias">
+
+          <button class="btn primary-btn" type="button" data-open-modal="booking" data-i18n="ctaBook">Agendar sesión</button>
+        </form>
+
+        <p class="small muted" data-i18n="contactPrivacy">
+          Consejo de seguridad: si estás en un dispositivo compartido, activa “Modo privado” y evita escribir información identificable.
+        </p>
+      </div>
+
+      <footer class="site-footer">
+        <p class="small muted">© <span id="year"></span> Nhoa</p>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<!-- MODALS -->
+<div class="modal" id="modal-booking" role="dialog" aria-modal="true" aria-labelledby="booking-title" hidden>
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="booking-title" data-i18n="bookingTitle">Agendar sesión</h2>
+      <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+    </div>
+    <p class="muted" data-i18n="bookingBody">
+      Esta sección es un placeholder. En producción, agenda con manejo de husos horarios, reprogramación flexible y verificación de consentimiento.
+    </p>
+
+    <div class="notice">
+      <strong data-i18n="bookingNoticeTitle">Privacidad</strong>
+      <p class="muted" data-i18n="bookingNoticeBody">
+        Evita compartir datos sensibles por formularios abiertos. Usa canales seguros y consentimiento informado.
+      </p>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn primary-btn" type="button" data-close-modal data-i18n="okBtn">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" hidden>
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="privacy-title" data-i18n="privacyTitle">Privacidad y uso seguro</h2>
+      <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar">✕</button>
+    </div>
+
+    <ul class="bullets">
+      <li data-i18n="privacy1">Puedes usar la app sin cuenta.</li>
+      <li data-i18n="privacy2">En “Modo privado” desactivamos notas y usamos almacenamiento temporal.</li>
+      <li data-i18n="privacy3">Evita escribir nombres, direcciones o detalles identificables en notas.</li>
+      <li data-i18n="privacy4">Si el dispositivo es compartido, usa “Ocultar pantalla” y borra historial al finalizar.</li>
+    </ul>
+
+    <div class="btn-row">
+      <button class="btn primary-btn" type="button" data-close-modal data-i18n="okBtn">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen-cover" id="screenCover" hidden>
+  <div class="screen-cover-card">
+    <h2 data-i18n="coverTitle">Pantalla en pausa</h2>
+    <p class="muted" data-i18n="coverBody">Toca “Volver” para regresar.</p>
+    <button class="btn primary-btn" type="button" id="coverBackBtn" data-i18n="coverBack">Volver</button>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
