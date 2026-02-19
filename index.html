@@ -26,29 +26,36 @@
     </a>
 
     <nav class="top-nav" aria-label="Navegación">
+      
+      <div class="nav-links" id="navLinks">
       <a class="nav-link" href="#services" data-i18n="navServices">Servicios</a>
-      <a class="nav-link" href="#tools" data-i18n="navTools">Herramientas</a>
-      <a class="nav-link" href="#about" data-i18n="navAbout">Sobre Nhoa</a>
-      <a class="nav-link" href="#testimonials" data-i18n="navTestimonials">Testimonios</a>
-      <a class="nav-link" href="#contact" data-i18n="navContact">Contacto</a>
+            <a class="nav-link" href="#tools" data-i18n="navTools">Herramientas</a>
+            <a class="nav-link" href="#about" data-i18n="navAbout">Sobre Nhoa</a>
+            <a class="nav-link" href="#testimonials" data-i18n="navTestimonials">Testimonios</a>
+            <a class="nav-link" href="#contact" data-i18n="navContact">Contacto</a>
+          </div>
 
+          <div class="nav-actions">
       <button id="privacyModeBtn" class="btn ghost-btn" type="button" data-i18n="privacyModeBtn">Modo privado</button>
-      <button class="btn primary-btn" type="button" data-open-modal="booking" data-i18n="ctaBook">Agendar sesión</button>
+            <button class="btn primary-btn" type="button" data-open-modal="booking" data-i18n="ctaBook">Agendar sesión</button>
 
-      <div class="lang-wrap">
-        <button id="langToggle" class="lang-icon" type="button"
-          aria-haspopup="menu" aria-expanded="false" aria-label="Cambiar idioma" title="Idioma">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm7.93 9h-3.09a15.6 15.6 0 0 0-1.16-5.02A8.03 8.03 0 0 1 19.93 11ZM12 4c.86 0 2.36 2.13 3.02 7H8.98C9.64 6.13 11.14 4 12 4ZM4.07 13h3.09c.2 1.84.65 3.6 1.16 5.02A8.03 8.03 0 0 1 4.07 13ZM7.16 11H4.07a8.03 8.03 0 0 1 4.25-5.02c-.51 1.42-.96 3.18-1.16 5.02Zm.82 2h8.04c-.66 4.87-2.16 7-3.02 7s-2.36-2.13-3.02-7Zm8.7 5.02c.51-1.42.96-3.18 1.16-5.02h3.09a8.03 8.03 0 0 1-4.25 5.02Z"/>
-          </svg>
-        </button>
+            <div class="lang-wrap">
+              <button id="langToggle" class="lang-icon" type="button"
+                aria-haspopup="menu" aria-expanded="false" aria-label="Cambiar idioma" title="Idioma">
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm7.93 9h-3.09a15.6 15.6 0 0 0-1.16-5.02A8.03 8.03 0 0 1 19.93 11ZM12 4c.86 0 2.36 2.13 3.02 7H8.98C9.64 6.13 11.14 4 12 4ZM4.07 13h3.09c.2 1.84.65 3.6 1.16 5.02A8.03 8.03 0 0 1 4.07 13ZM7.16 11H4.07a8.03 8.03 0 0 1 4.25-5.02c-.51 1.42-.96 3.18-1.16 5.02Zm.82 2h8.04c-.66 4.87-2.16 7-3.02 7s-2.36-2.13-3.02-7Zm8.7 5.02c.51-1.42.96-3.18 1.16-5.02h3.09a8.03 8.03 0 0 1-4.25 5.02Z"/>
+                </svg>
+              </button>
 
-        <div id="langMenu" class="lang-menu" role="menu" hidden>
-          <button class="lang-item" role="menuitem" data-lang="es">Español</button>
-          <button class="lang-item" role="menuitem" data-lang="en">English</button>
-          <button class="lang-item" role="menuitem" data-lang="pt">Português</button>
-        </div>
-      </div>
+              <div id="langMenu" class="lang-menu" role="menu" hidden>
+                <button class="lang-item" role="menuitem" data-lang="es">Español</button>
+                <button class="lang-item" role="menuitem" data-lang="en">English</button>
+                <button class="lang-item" role="menuitem" data-lang="pt">Português</button>
+              </div>
+            </div>
+
+            <button id="menuBtn" class="icon-btn menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" title="Menú">☰</button>
+          </div>
     </nav>
   </div>
 </header>
@@ -251,7 +258,7 @@
 
         <div class="about-media" aria-label="Imagen ilustrativa">
           <div class="media-frame">
-            <img src="img/logo1.png" alt="Nhoa" class="media-img">
+            <img src="img/logo2.png" alt="Nhoa" class="media-img">
             <p class="muted small" data-i18n="aboutMediaHint">Puedes reemplazar esta imagen por una foto profesional o ilustración.</p>
           </div>
         </div>

@@ -37,6 +37,63 @@ function initLangMenu() {
   });
 }
 
+
+function initMobileNav() {
+  const nav = document.querySelector('.top-nav');
+  const btn = document.querySelector('#menuBtn');
+  const linksWrap = document.querySelector('#navLinks');
+
+  const langMenu = document.querySelector('#langMenu');
+  const langToggle = document.querySelector('#langToggle');
+
+  const closeNav = () => {
+    if (!nav || !btn) return;
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  const closeLang = () => {
+    if (!langMenu || !langToggle) return;
+    langMenu.hidden = true;
+    langToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  btn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!nav) return;
+    const isOpen = nav.classList.contains('open');
+    // one open at a time
+    closeLang();
+    if (isOpen) {
+      closeNav();
+    } else {
+      nav.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav || !btn) return;
+    if (!nav.classList.contains('open')) return;
+    const target = e.target;
+    if (btn.contains(target)) return;
+    if (linksWrap && linksWrap.contains(target)) return;
+    closeNav();
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  // Close if resizing back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) closeNav();
+  });
+}
+
+
 function initModals() {
   const openers = document.querySelectorAll('[data-open-modal]');
   const modals = document.querySelectorAll('.modal');
@@ -83,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // i18n
   applyTranslations();
   initLangMenu();
+  initMobileNav();
 
   const saved = localStorage.getItem('lang') || 'es';
   setLang(saved);
