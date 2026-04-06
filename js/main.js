@@ -9,7 +9,7 @@ function updateBookingWhatsAppLink() {
   const bookingBtn = document.querySelector('#bookingWhatsAppBtn');
   if (!bookingBtn) return;
 
-  const phone = '593000000000';
+  const phone = '593962900907';
   const message = encodeURIComponent(t('bookingWhatsappMessage'));
   bookingBtn.href = `https://wa.me/${phone}?text=${message}`;
 }
