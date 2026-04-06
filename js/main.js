@@ -1,7 +1,18 @@
 // js/main.js
 
 import { initMoodUI } from './ui-mood.js';
-import { applyTranslations, setLang } from './i18n.js';
+import { applyTranslations, setLang, t } from './i18n.js';
+
+
+
+function updateBookingWhatsAppLink() {
+  const bookingBtn = document.querySelector('#bookingWhatsAppBtn');
+  if (!bookingBtn) return;
+
+  const phone = '593000000000';
+  const message = encodeURIComponent(t('bookingWhatsappMessage'));
+  bookingBtn.href = `https://wa.me/${phone}?text=${message}`;
+}
 
 function initLangMenu() {
   const toggle = document.querySelector('#langToggle');
@@ -24,6 +35,7 @@ function initLangMenu() {
     const btn = e.target.closest('[data-lang]');
     if (!btn) return;
     setLang(btn.dataset.lang);
+    updateBookingWhatsAppLink();
     closeMenu();
   });
 
@@ -144,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const saved = localStorage.getItem('lang') || 'es';
   setLang(saved);
+  updateBookingWhatsAppLink();
 
   // UI features
   initModals();
