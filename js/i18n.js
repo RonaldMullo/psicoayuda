@@ -61,8 +61,8 @@ const STRINGS = {
     selectMoodAlert: "Por favor selecciona cómo te sientes hoy.",
 
     aboutTitle: "Sobre Nhoa",
-    aboutBody1: "Nhoa nace para ofrecer apoyo psicológico con una estética clínica y cálida, y con seguridad como prioridad.",
-    aboutBody2: "Para contextos de alta vulnerabilidad, priorizamos: mínima recolección de datos, controles de privacidad en pantalla y opciones sin cuenta.",
+    aboutBody1: "Nhoa te brinda  atención psicológica clínica especializada y basada en evidencia a adolescentes, adultos y adultos mayores, ofreciendo un espacio terapéutico seguro, empático y confidencial.",
+    aboutBody2: "Nos adaptamos a las necesidades únicas de cada etapa vital para aliviar el sufrimiento emocional, fomentar el autoconocimiento y promover herramientas duraderas de bienestar.",
     aboutNoticeTitle: "Importante",
     aboutNoticeBody: "Si estás en una situación de riesgo inmediato, busca ayuda local de emergencia. Esta app no sustituye servicios de emergencia.",
     aboutMediaHint: "Puedes reemplazar esta imagen por una foto profesional o ilustración.",
@@ -158,8 +158,8 @@ const STRINGS = {
     selectMoodAlert: "Please select how you feel today.",
 
     aboutTitle: "About Nhoa",
-    aboutBody1: "Nhoa is designed for warm, clinical support—security comes first.",
-    aboutBody2: "For high-vulnerability contexts we prioritize: data minimization, private-screen controls, and no-account options.",
+    aboutBody1: "Nhoa provides specialized, evidence-based clinical psychological care for adolescents, adults, and older adults, offering a safe, empathetic, and confidential therapeutic space.",
+    aboutBody2: "We adapt to the unique needs of each life stage to relieve emotional suffering, foster self-awareness, and promote lasting well-being tools.",
     aboutNoticeTitle: "Important",
     aboutNoticeBody: "If you're in immediate danger, seek local emergency help. This app is not a replacement for emergency services.",
     aboutMediaHint: "You can replace this image with a professional photo or illustration.",
@@ -255,8 +255,8 @@ const STRINGS = {
     selectMoodAlert: "Por favor selecione como você está hoje.",
 
     aboutTitle: "Sobre Nhoa",
-    aboutBody1: "Nhoa foi criada para apoio clínico e acolhedor, com segurança como prioridade.",
-    aboutBody2: "Em alta vulnerabilidade priorizamos: minimização de dados, controles de tela privada e opção sem conta.",
+    aboutBody1: "A Nhoa oferece atendimento psicológico clínico especializado e baseado em evidências para adolescentes, adultos e idosos, proporcionando um espaço terapêutico seguro, empático e confidencial.",
+    aboutBody2: "Adaptamo-nos às necessidades únicas de cada fase da vida para aliviar o sofrimento emocional, promover o autoconhecimento e incentivar ferramentas duradouras de bem-estar.",
     aboutNoticeTitle: "Importante",
     aboutNoticeBody: "Em risco imediato, procure ajuda de emergência local. Este app não substitui emergências.",
     aboutMediaHint: "Você pode trocar esta imagem por uma foto profissional ou ilustração.",
